@@ -1,6 +1,6 @@
 <?php
 Session_Start();
-$IS_DEBUG = true;
+$IS_DEBUG = false;
 $_SESSION["current_page"] = "fingerprint/index.php";
 $finger_id = "";
 $active_user = "";
@@ -253,7 +253,7 @@ if ($IS_DEBUG) {
 
             }
             function pasuser(form) {
-                location = "../project-rfq/portal.php";
+                location = "../portal";
 //                $.post("loginCheck.php", {name: form.id.value, pass: form.pass.value})
 //                        .done(function (data) {
 //                            console.log("xxx");
