@@ -1,6 +1,6 @@
 <?php
 Session_Start();
-$IS_DEBUG = true;
+$IS_DEBUG = false;
 $_SESSION["current_page"] = "portal/index.php";
 $finger_id = "";
 $active_user = "";
