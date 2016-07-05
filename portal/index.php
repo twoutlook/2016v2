@@ -22,7 +22,7 @@ if (strlen($active_user) == 0) {
     ?>
     <html> 
         <head> 
-            <meta HTTP-EQUIV="REFRESH" CONTENT="2; URL=../fingerprint" /> 
+             <meta http-equiv="refresh" content="1;url=.." /> 
         </head> 
     </html> 
 
