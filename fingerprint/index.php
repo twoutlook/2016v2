@@ -466,48 +466,59 @@ if ($IS_DEBUG) {
                 <div style="font-size: 32pt">
                     <input style="font-size: 32pt" type="button" name="btnSearchFp" id="btnSearchFp" value="輸入指纹" onclick="SearchFp()"/>
                 </div>
-                <div id="TOGO" style="display: none">
-                    <input style="font-size: 32pt" type="button" value="進入應用" onClick="pasuser(this.form)">
-                </div>
-                </br>
-
-
-
-
-
-                <br></br>
-                <div style="display: none">
-                    <label>读写记事本：</label><br></br>
-                    <label for="eNotePage">读写页码：</label>
-                    <input name="eNotePage" width="75px" type="text" id="eNotePage" value="0" />
-                    <label for="btnReadNote">（从0开始，最多可存16页，每页最大32个字节）</label>
-                    <br />
+                <?php
+                if (strlen($active_user_zh) > 0) {
+                    ?>
+                    <div id="TOGO" >
+                        <?php
+                    } else {
+                        ?>
+                        <div id="TOGO" style="display: none">
+                            <?php
+                        }
+                        ?>
+                        <!--                <div id="TOGO" style="display: none">-->
+                        <input style="font-size: 32pt" type="button" value="進入應用" onClick="pasuser(this.form)">
+                    </div>
                     </br>
-                    <label for="eWriteContent">写入内容：</label>
-                    <input name="eWriteContent" width="300px" type="text" id="eWriteContent" value="" />
-                    <input type="button" name="btnWriteNote" id="btnWriteNote" value="写记录本" onclick="WriteNote()"/>
-                    <br />
-                    </br>
-                    <label for="eReadContent">读出内容：</label>
-                    <input name="eReadContent" width="300px" type="text" id="eReadContent" value="" />
-                    <input type="button" name="btnReadNote" id="btnReadNote" value="读记事本" onclick="ReadNote()"/>
+
+
+
+
 
                     <br></br>
-                    <div>
-                        <label for="soundled">灯声控制</label>
-                        <input name="ledsound" width="75px" type="text" id="ledsound" value="3" />
-                        <label for="ledsound">（红灯3，绿灯4，声音5）</label>
-                        <input name="control" width="75px" type="text" id="control" value="0" />
-                        <label for="control">（开0，关1）</label>
+                    <div style="display: none">
+                        <label>读写记事本：</label><br></br>
+                        <label for="eNotePage">读写页码：</label>
+                        <input name="eNotePage" width="75px" type="text" id="eNotePage" value="0" />
+                        <label for="btnReadNote">（从0开始，最多可存16页，每页最大32个字节）</label>
+                        <br />
+                        </br>
+                        <label for="eWriteContent">写入内容：</label>
+                        <input name="eWriteContent" width="300px" type="text" id="eWriteContent" value="" />
+                        <input type="button" name="btnWriteNote" id="btnWriteNote" value="写记录本" onclick="WriteNote()"/>
+                        <br />
+                        </br>
+                        <label for="eReadContent">读出内容：</label>
+                        <input name="eReadContent" width="300px" type="text" id="eReadContent" value="" />
+                        <input type="button" name="btnReadNote" id="btnReadNote" value="读记事本" onclick="ReadNote()"/>
+
                         <br></br>
-                        <input type="button" name="btnsoundled" id="btnsoundled" value="设置" onclick="Setsoundled()"/>
+                        <div>
+                            <label for="soundled">灯声控制</label>
+                            <input name="ledsound" width="75px" type="text" id="ledsound" value="3" />
+                            <label for="ledsound">（红灯3，绿灯4，声音5）</label>
+                            <input name="control" width="75px" type="text" id="control" value="0" />
+                            <label for="control">（开0，关1）</label>
+                            <br></br>
+                            <input type="button" name="btnsoundled" id="btnsoundled" value="设置" onclick="Setsoundled()"/>
+
+                        </div>
+                        <br></br>
 
                     </div>
-                    <br></br>
-
-                </div>
-                <div id="showResult">
-                </div>
+                    <div id="showResult">
+                    </div>
             </form>
         </center>
     </body>
