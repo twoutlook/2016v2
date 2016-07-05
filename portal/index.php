@@ -1,7 +1,7 @@
 <?php
 Session_Start();
-$IS_DEBUG = false;
-$_SESSION["current_page"] = "fingerprint/index.php";
+$IS_DEBUG = true;
+$_SESSION["current_page"] = "portal/index.php";
 $finger_id = "";
 $active_user = "";
 $active_user_zh = "";
