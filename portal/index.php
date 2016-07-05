@@ -22,7 +22,7 @@ if (strlen($active_user) == 0) {
     ?>
     <html> 
         <head> 
-             <meta http-equiv="refresh" content="1;url=.." /> 
+            <meta http-equiv="refresh" content="1;url=.." /> 
         </head> 
     </html> 
 
@@ -43,8 +43,7 @@ if (strlen($active_user) == 0) {
             <h1>--- 應用入口 ---</h1>
             <div style="font-size: 16pt">
 
-                <?php // echo "session id is $finger_id <br>";   ?>
-                <?php //echo "登入帳號︰ $active_user ";  ?>
+
                 <?php
                 if (strlen($active_user_zh) > 0) {
                     echo "登入用戶︰ $active_user_zh ($active_user)";
@@ -53,7 +52,15 @@ if (strlen($active_user) == 0) {
                 ?>
 
             </div>
+            <div style="font-size: 32pt">
+                <ul>
+                    <li>
+                        <a href="../project-rfq/">RFQ 報價自動化</a>
+                    </li>
+                </ul>
 
+
+            </div>
 
         </center>
     </body>

@@ -40,7 +40,7 @@ if (strlen($active_user) == 0) {
     <body>
         <center>
 
-            <h1>--- 應用入口 ---</h1>
+            <h1>--- RFQ 報價自動化 ---</h1>
             <div style="font-size: 16pt">
 
                 <?php // echo "session id is $finger_id <br>";   ?>
@@ -53,8 +53,16 @@ if (strlen($active_user) == 0) {
                 ?>
 
             </div>
-
-
+            <div style="font-size: 32pt">
+                <ul>
+                    <li>
+                        <a href="A0629/rfq/index.php">RFQ 報價自動化 (公版)</a>
+                    </li>
+                    <li>
+                        <a href="A0629/rfq/index-en.php">RFQ 報價自動化 (中英文版)</a>
+                    </li>
+                </ul>
+            </div>
         </center>
     </body>
 </html>
