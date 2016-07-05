@@ -32,9 +32,9 @@ if ($device_id != "abc987") {
 $nameList[611] = "test111";
 $nameList[612] = "test222";
 $nameList[613] = "test333";
-$nameZhList[611] = "測試帳號一";
-$nameZhList[612] = "測試帳號二";
-$nameZhList[613] = "測試帳號三";
+$nameZhList[611] = "左手食指";
+$nameZhList[612] = "左手中指";
+$nameZhList[613] = "左手無名指";
 
 $nameList[711] = "yf.sun";
 $nameList[712] = "wenqing.wu";

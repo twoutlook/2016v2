@@ -1,3 +1,23 @@
+<?php
+Session_Start();
+$IS_DEBUG = true;
+$_SESSION["current_page"] = "fingerprint/index.php";
+$finger_id = "";
+$active_user = "";
+$active_user_zh = "";
+if (isset($_SESSION["finger_id"])) {
+    $finger_id = $_SESSION["finger_id"];
+}
+if (isset($_SESSION["active_user"])) {
+    $active_user = $_SESSION["active_user"];
+}
+if (isset($_SESSION["active_user_zh"])) {
+    $active_user_zh = $_SESSION["active_user_zh"];
+}
+if ($IS_DEBUG) {
+    print_r($_SESSION);
+}
+?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
     <head>
@@ -284,7 +304,7 @@
                     //     alert("搜索到相同指纹ID：" + fpidd);
 //                    x.innerHTML = "<h1>" +Date()+ "<br>Got ID=" + fpidd + "</h1>";
                     // x.innerHTML = fpidd;
-                    $.post("finger-login-checker-v2.php", {finger_id: form1.ZAZFingerActivex.SearchID,device_id:"abc987"})
+                    $.post("finger-login-checker-v2.php", {finger_id: form1.ZAZFingerActivex.SearchID, device_id: "abc987"})
                             .done(function (data) {
                                 if (data === "ok999") {
                                     x.innerHTML = "";
@@ -292,9 +312,9 @@
                                     //   alert("msg: " + data);
                                 } else {
                                     $("#TOGO").hide(500);
-                                   //       alert("DEBUG: "+data);
+                                    //       alert("DEBUG: "+data);
                                     x.innerHTML = "<h1>(finger-login-checker)指紋機或指紋ID未註冊到本應用，請回饋給應用管理人員。</h1>" + "<h3>" + Date() + "</h3>";
-                                }                              
+                                }
                             });
 
                 } else
@@ -334,8 +354,19 @@
     <body>
         <center>
 
-            <h1><u>指紋登錄</u></h1>
+            <h1>--- 指紋登錄 ---</h1>
+            <div style="font-size: 16pt">
 
+                <?php // echo "session id is $finger_id <br>";  ?>
+                <?php //echo "登入帳號︰ $active_user "; ?>
+                <?php
+                if (strlen($active_user_zh) > 0) {
+                    echo "登入用戶︰ $active_user_zh";
+                    echo '&nbsp;&nbsp;<a href="logout.php">[登出]</a>';
+                }
+                ?>
+
+            </div>
             <form action="" method="post" name="form1" id="form1"> 
 
                 <table style="display: none" width="600" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#01077A" height="30">
