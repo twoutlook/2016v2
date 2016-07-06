@@ -30,11 +30,11 @@ if ($device_id != "abc987") {
 
 
 $nameList[611] = "mark.chen";
-$nameList[612] = "test222";
-$nameList[613] = "test333";
-$nameZhList[611] = "陳炳陵(左手食指)";
-$nameZhList[612] = "左手中指";
-$nameZhList[613] = "左手無名指";
+//$nameList[612] = "mark.chen";
+//$nameList[613] = "mark.chen";
+$nameZhList[611] = "陳炳陵";
+//$nameZhList[612] = "陳炳陵-左手食指";
+//$nameZhList[613] = "陳炳陵-左手無名指";
 
 $nameList[711] = "yf.sun";
 $nameList[712] = "wenqing.wu";
